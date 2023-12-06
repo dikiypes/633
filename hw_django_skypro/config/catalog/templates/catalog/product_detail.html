@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% load custom_filters %}
+
+{% block title %}{{ product.name }} - Electronic Store{% endblock %}
+
+{% block content %}
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{% mediapath product.image_url %}" class="img-fluid" alt="{{ product.name }}">
+            </div>
+            <div class="col-md-6">
+                <h1>{{ product.name }}</h1>
+                <p class="lead">{{ product.description }}</p>
+                <p>Price: ${{ product.price }}</p>
+                <!-- Другая информация о товаре, которую вы хотите отобразить -->
+            </div>
+        </div>
+    </div>
+{% endblock %}
+ 
